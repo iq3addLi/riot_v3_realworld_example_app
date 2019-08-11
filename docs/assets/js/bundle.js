@@ -4403,7 +4403,6 @@
 
       useCase.requestTags().then( (tags) => {
           self.tags.tags_view.setTagWords( tags );
-          self.tags.tags_view.update();
       });
 
       self.tags.article_tab_view.setItems( useCase.tabItems() );
@@ -10859,7 +10858,7 @@
 
   });
 
-  riot$1.tag2('comment_table_view', '<div class="card" each="{comment in comments}"> <div class="card-block"> <p class="card-text"> <comment_body_view marked_body="{markedBody( comment.body )}"></comment_body_view> </p> </div> <div class="card-footer"> <a href="" class="comment-author"> <img riot-src="{comment.author.image}" class="comment-author-img"> </a> &nbsp; <a href="" class="comment-author">{comment.author.username}</a> <span class="date-posted">{formattedDate( comment.createdAt )}</span> <virtual if="{comment.author.username === loggedUserProfile.username}"> <span class="mod-options"> <i onclick="{actionOfTrashButton.bind( this, comment.id )}" class="ion-trash-a"></i> </span> </virtual> </div> </div>', '', '', function(opts) {
+  riot$1.tag2('comment_table_view', '<div class="card" each="{comment in comments}"> <div class="card-block"> <p class="card-text"> <comment_body_view marked_body="{markedBody( comment.body )}"></comment_body_view> </p> </div> <div class="card-footer"> <a href="{⁗#/profile/⁗ + comment.author.username}" class="comment-author"> <img riot-src="{comment.author.image}" class="comment-author-img"> </a> &nbsp; <a href="{⁗#/profile/⁗ + comment.author.username}" class="comment-author">{comment.author.username}</a> <span class="date-posted">{formattedDate( comment.createdAt )}</span> <virtual if="{comment.author.username === loggedUserProfile.username}"> <span class="mod-options"> <i onclick="{actionOfTrashButton.bind( this, comment.id )}" class="ion-trash-a"></i> </span> </virtual> </div> </div>', '', '', function(opts) {
 
   var self = this;
   self.comments = [];

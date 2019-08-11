@@ -31,7 +31,6 @@ this.on("mount", () => {
     // request tagList
     useCase.requestTags().then( (tags) => {
         self.tags.tags_view.setTagWords( tags ) // note: riot.tags are undefined from the promise function
-        self.tags.tags_view.update()
     })
 
     // setup article tab
