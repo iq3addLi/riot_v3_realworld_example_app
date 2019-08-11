@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iq3addLi/template_made_riotjs.git"
+    "url": "https://github.com/iq3addLi/riot_realworld_example_app.git"
   },
   "keywords": [
     "riot",
