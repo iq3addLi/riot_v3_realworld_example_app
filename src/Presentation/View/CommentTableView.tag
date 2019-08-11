@@ -41,11 +41,11 @@ self.actionOfTrashButton = ( commentId ) => {
     <div class="card-footer">
 
         <!-- comment author infomation -->
-        <a href="" class="comment-author">
+        <a href={ "#/profile/" + comment.author.username } class="comment-author">
             <img src={ comment.author.image } class="comment-author-img" />
         </a>
         &nbsp;
-        <a href="" class="comment-author">{ comment.author.username }</a>
+        <a href={ "#/profile/" + comment.author.username } class="comment-author">{ comment.author.username }</a>
         <span class="date-posted">{ formattedDate( comment.createdAt ) }</span>
 
         <!-- comment controls -->
